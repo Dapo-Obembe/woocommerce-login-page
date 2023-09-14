@@ -11,14 +11,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		showRegLink.addEventListener( 'click', function ( event ) {
 			event.preventDefault(); // Prevent the default link behavior.
 			registerSection.style.display = 'flex'; // Show the register section.
-			loginSection.style.display = 'none'; // Show the login section.
+			loginSection.style.display = 'none'; // hide the login section.
 		} );
 	}
 
 	if ( showLogin && loginSection ) {
 		showLogin.addEventListener( 'click', function ( event ) {
 			event.preventDefault(); // Prevent the default link behavior.
-			registerSection.style.display = 'none'; // Show the register section.
+			registerSection.style.display = 'none'; // hide the register section.
 			loginSection.style.display = 'flex'; // Show the login section.
 		} );
 	}
