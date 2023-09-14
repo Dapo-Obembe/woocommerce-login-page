@@ -1,0 +1,56 @@
+//--------------------------------------------------------------
+// Global Resets/Overrides
+//--------------------------------------------------------------
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-wrap: breakword;
+	word-wrap: break-word;
+}
+
+//-----------------------------------------
+// Html
+//-----------------------------------------
+html {
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
+//-----------------------------------------
+// Body
+//-----------------------------------------
+body {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	font-weight: $font-weight-normal;
+	line-height: $line-height-base;
+	color: $color-text-base;
+	background: $color-white;
+	height: 100%;
+
+	&.menu-open {
+		overflow: hidden;
+	}
+}
+
+//-----------------------------------------
+// Sticky Footer
+//-----------------------------------------
+body > footer {
+	position: sticky;
+	top: 100vh;
+}
+
+//-----------------------------------------
+// Container
+//-----------------------------------------
+.container {
+	@include container;
+}
+
+.text-page-container {
+	@include text-page-container;
+}

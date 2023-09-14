@@ -1,0 +1,5 @@
+/**
+ * Site JS
+ */
+
+import './components';

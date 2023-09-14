@@ -1,0 +1,24 @@
+//--------------------------------------------------------------
+// Social Icons styles
+//--------------------------------------------------------------
+.social-icons {
+	display: flex;
+	align-items: center;
+
+	&__item {
+		text-decoration: none;
+		line-height: 0;
+		color: $color-primary;
+		transition: color 0.2s ease-in-out;
+		padding: 5px;
+
+		&:not( :last-child ) {
+			margin-right: 2px;
+		}
+
+		&:hover,
+		&:focus {
+			color: $color-secondary;
+		}
+	}
+}

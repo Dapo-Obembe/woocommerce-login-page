@@ -1,0 +1,62 @@
+//--------------------------------------------------------------
+// Footer Styles
+//--------------------------------------------------------------
+.site-footer {
+	border-top: 1px solid $color-light-grey;
+	margin-top: 100px;
+	text-align: center;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 0;
+
+		@include mobile {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__navigation {
+		@include mobile {
+			margin: 20px 0;
+		}
+
+		ul {
+			display: flex;
+			align-items: center;
+			list-style: none;
+		}
+
+		li {
+			&:not( :last-child ) {
+				margin-right: 10px;
+			}
+
+			&.current-menu-item {
+				a {
+					color: $color-secondary;
+				}
+			}
+		}
+
+		a {
+			display: block;
+			padding: 5px 10px;
+			text-decoration: none;
+			color: $color-primary;
+			transition: color 0.2s ease-in-out;
+
+			&:hover,
+			&:focus {
+				color: $color-secondary;
+			}
+		}
+	}
+
+	&__copyright {
+		padding: 10px 0;
+		color: $color-dark;
+		font-size: 14px;
+	}
+}

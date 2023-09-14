@@ -1,0 +1,22 @@
+{
+	"name": "acf/example",
+	"title": "Example Block",
+	"description": "Example Block description",
+	"category": "belov-blocks",
+	"icon": "block-default",
+	"keywords": [ "example", "block" ],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "example.php"
+	},
+	"script": "block-example",
+	"style": "block-example",
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"spacing": {
+			"padding": [ "top", "bottom" ],
+			"margin": [ "top", "bottom" ]
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"extends": [
+		"@wordpress/stylelint-config/scss",
+		"stylelint-config-prettier"
+	],
+	"rules": {
+		"rule-empty-line-before": null,
+		"comment-empty-line-before": null,
+		"at-rule-empty-line-before": null,
+		"declaration-colon-newline-after": null,
+		"declaration-no-important": true,
+		"function-parentheses-space-inside": null,
+		"no-descending-specificity": null,
+		"selector-pseudo-class-parentheses-space-inside": null,
+		"selector-class-pattern": [
+			"^(?!u|is|has)[a-zA-Z0-9]+(?:__[a-zA-Z0-9]+)?(?:--[a-zA-Z0-9]+)?",
+			{
+				"message": "Class names should follow BEM syntax"
+			}
+		]
+	}
+}

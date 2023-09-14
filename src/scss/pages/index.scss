@@ -1,0 +1,16 @@
+//--------------------------------------------------------------
+// Pages Styles
+//--------------------------------------------------------------
+
+@import 'login';
+
+header,
+footer {
+	display: none;
+}
+.entry-content .woocommerce {
+	max-width: 100% !important;
+	padding-left: 0 !important;
+	padding-right: 0;
+	margin: 0;
+}

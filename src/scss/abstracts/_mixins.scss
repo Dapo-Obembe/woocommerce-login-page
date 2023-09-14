@@ -1,0 +1,53 @@
+//--------------------------------------------------------------
+// SCSS Mixins
+//--------------------------------------------------------------
+
+//-----------------------------------------
+// Breakpoints
+//-----------------------------------------
+@mixin mobile {
+	@media ( max-width: $mobile ) {
+		@content;
+	}
+}
+
+//-----------------------------------------
+// Containers
+//-----------------------------------------
+@mixin container {
+	max-width: $container-max-width;
+	padding-left: $container-padding-x;
+	padding-right: $container-padding-x;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@mixin text-page-container {
+	max-width: $text-page-max-width;
+	padding-left: $container-padding-x;
+	padding-right: $container-padding-x;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+//-----------------------------------------
+// Buttons
+//-----------------------------------------
+@mixin button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1em 2em;
+	font-size: 1rem;
+	background-color: $color-primary;
+	color: $color-white;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: background-color 0.2s ease-in-out;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background-color: $color-secondary;
+	}
+}
