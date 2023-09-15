@@ -18,6 +18,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+// Require the ACF function for the image variables.
+require get_template_directory() . '/inc/functions/acf-functions.php';
 
 do_action( 'woocommerce_before_customer_login_form' ); ?>
 
@@ -27,7 +29,11 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 	<section class="login-section" id="login-section">
 		<div class="login-section__img">
-			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/src/images/man.jpeg" alt="Man working from home" />
+			<?php if ( $login_img ) : ?>
+					<?php echo wp_get_attachment_image( $login_img, 'full' ); ?>
+			<?php else : ?>
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/src/images/light-pattern.png' ); ?>" alt="default image" />
+			<?php endif; ?>
 		</div>
 		<div class="login-section__form">
 			<h2><?php esc_html_e( 'Log in', 'woocommerce' ); ?></h2>
@@ -69,7 +75,11 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 	<section class="register-section" id="register-section">
 		<div class="register-section__img">
-			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/src/images/woman.jpeg" alt="woman working from home" />
+			<?php if ( $signup_img ) : ?>
+					<?php echo wp_get_attachment_image( $signup_img, 'full' ); ?>
+			<?php else : ?>
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/src/images/light-pattern.png' ); ?>" alt="default image" />
+			<?php endif; ?>
 		</div>
 		<div class="register-section__form">
 			<h2><?php esc_html_e( 'Sign Up', 'woocommerce' ); ?></h2>
@@ -107,8 +117,6 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 							<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 							<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" />
 						</p>
-
-					<?php else : ?>
 
 					<?php endif; ?>
 
